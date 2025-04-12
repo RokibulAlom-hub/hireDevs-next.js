@@ -1,16 +1,11 @@
-import Navbar from "./Components/Navbar/page";
+import Banner from "./Components/Banner/page";
 
 export default function Home() {
   return (
-    <div className="font-[family-name:var(--font-geist-sans)]">
-      {/* this is custom navbar */}
-      <Navbar></Navbar>
-      <main className="">
-      
+    <div className="">
+      <main className="container">
+        <Banner></Banner>
       </main>
-      <footer>
-       
-      </footer>
     </div>
   );
 }
