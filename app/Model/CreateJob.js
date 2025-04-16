@@ -8,6 +8,6 @@ const Newjobs = mongoose.Schema({
     type: String,
     description:String,
 },{
-    timestamps: true,
+    // timestamps: true,
 })
 export default mongoose.models.Newjobs || mongoose.model("Newjobs", Newjobs)

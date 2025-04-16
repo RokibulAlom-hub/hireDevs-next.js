@@ -19,11 +19,20 @@ const CreateJobs = () => {
    const {name, value} = e.target;
    setFormData(prev => ({...prev, [name]: value}))
   }
-  const handleSubmit = (e) => {
+  const handleSubmit =async (e) => {
     e.preventDefault();
-    console.log('Job submitted:', formData);
+    // console.log('Job submitted:', formData);
     // Add your API call here
-    
+    const response = await fetch("http://localhost:3000/api/createjob",{
+      method:"POST",
+      headers: {
+        "Content-Type":"application/json"
+      },
+      body: JSON.stringify(formData)
+    })
+    const result = await response.json();
+
+   if(result.success){
     alert('Job created successfully!');
     setFormData({
       title: '',
@@ -33,6 +42,7 @@ const CreateJobs = () => {
       type: 'Full-time',
       description: '',
     });
+   }
   };
 
   return (
