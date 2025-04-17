@@ -10,5 +10,5 @@ module.exports = {
       colors: {},
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [],
 };

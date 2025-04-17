@@ -6,6 +6,7 @@ export default function Home() {
     <div className="">
       <main className="container">
         <Banner></Banner>
+        
         <Jobs></Jobs>
       </main>
     </div>
