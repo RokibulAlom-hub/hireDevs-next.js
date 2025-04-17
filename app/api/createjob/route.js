@@ -9,3 +9,9 @@ export const POST = async(req) =>{
     await result.save()
     return NextResponse.json({success: true, status: 200})
 }
+
+export const GET = async (req) => {
+    await connectDB()
+    const result = await CreateJob.find();
+    return NextResponse.json(result)
+}
