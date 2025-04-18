@@ -1,7 +1,18 @@
 import Link from "next/link";
 import { BiSolidInstitution } from "react-icons/bi";
 import { CiLocationOn } from "react-icons/ci";
-const Card = ({ data }) => {
+
+ const CardParent = ({jobs}) =>{
+  return(
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+           {jobs?.map((job) => <Card key={job._id} data={job} ></Card>)}
+      </div>
+  )
+}
+export default CardParent;
+
+
+export const Card = ({ data }) => {
   return (
     <div className="max-w-md rounded-lg overflow-hidden shadow-lg bg-white border border-gray-200 hover:shadow-xl transition-shadow duration-300">
       <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-4">
@@ -54,4 +65,6 @@ const Card = ({ data }) => {
   );
 };
 
-export default Card;
+
+
+

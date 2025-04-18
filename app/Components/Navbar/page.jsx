@@ -12,8 +12,8 @@ const Navbar = () => {
       {/* Navigation Links */}
       <div className="hidden md:flex gap-6 text-gray-700 font-medium">
         <Link href="/" className="hover:text-blue-600">Home</Link>
+        <Link href="/jobs" className="hover:text-blue-600">Alljobs</Link>
         <Link href="/createjobs" className="hover:text-blue-600">CreateJob</Link>
-        <Link href="/createprofile" className="hover:text-blue-600">CreateProfile</Link>
       </div>
 
       {/* Login Button */}
